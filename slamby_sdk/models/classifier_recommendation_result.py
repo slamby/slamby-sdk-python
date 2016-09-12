@@ -41,13 +41,15 @@ class ClassifierRecommendationResult(object):
         self.swagger_types = {
             'tag_id': 'str',
             'score': 'float',
-            'tag': 'Tag'
+            'tag': 'Tag',
+            'is_emphasized': 'bool'
         }
 
         self.attribute_map = {
             'tag_id': 'TagId',
             'score': 'Score',
-            'tag': 'Tag'
+            'tag': 'Tag',
+            'is_emphasized': 'IsEmphasized'
         }
 
 
@@ -57,13 +59,15 @@ class ClassifierRecommendationResult(object):
 
         self._tag = None
 
+        self._is_emphasized = None
+
 
 
     @property
     def tag_id(self):
         """
         Gets the tag_id of this ClassifierRecommendationResult.
-
+        The recommended tag id
 
         :return: The tag_id of this ClassifierRecommendationResult.
         :rtype: str
@@ -74,7 +78,7 @@ class ClassifierRecommendationResult(object):
     def tag_id(self, tag_id):
         """
         Sets the tag_id of this ClassifierRecommendationResult.
-
+        The recommended tag id
 
         :param tag_id: The tag_id of this ClassifierRecommendationResult.
         :type: str
@@ -86,7 +90,7 @@ class ClassifierRecommendationResult(object):
     def score(self):
         """
         Gets the score of this ClassifierRecommendationResult.
-
+        The score that belongs to the tag id
 
         :return: The score of this ClassifierRecommendationResult.
         :rtype: float
@@ -97,7 +101,7 @@ class ClassifierRecommendationResult(object):
     def score(self, score):
         """
         Sets the score of this ClassifierRecommendationResult.
-
+        The score that belongs to the tag id
 
         :param score: The score of this ClassifierRecommendationResult.
         :type: float
@@ -126,6 +130,29 @@ class ClassifierRecommendationResult(object):
         :type: Tag
         """
         self._tag = tag
+
+
+    @property
+    def is_emphasized(self):
+        """
+        Gets the is_emphasized of this ClassifierRecommendationResult.
+        If there was applied emphasizing by this tag
+
+        :return: The is_emphasized of this ClassifierRecommendationResult.
+        :rtype: bool
+        """
+        return self._is_emphasized
+
+    @is_emphasized.setter
+    def is_emphasized(self, is_emphasized):
+        """
+        Sets the is_emphasized of this ClassifierRecommendationResult.
+        If there was applied emphasizing by this tag
+
+        :param is_emphasized: The is_emphasized of this ClassifierRecommendationResult.
+        :type: bool
+        """
+        self._is_emphasized = is_emphasized
 
 
     def to_dict(self):

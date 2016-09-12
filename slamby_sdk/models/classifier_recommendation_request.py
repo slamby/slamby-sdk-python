@@ -67,7 +67,7 @@ class ClassifierRecommendationRequest(object):
     def text(self):
         """
         Gets the text of this ClassifierRecommendationRequest.
-
+        The text the you want to classify
 
         :return: The text of this ClassifierRecommendationRequest.
         :rtype: str
@@ -78,7 +78,7 @@ class ClassifierRecommendationRequest(object):
     def text(self, text):
         """
         Sets the text of this ClassifierRecommendationRequest.
-
+        The text the you want to classify
 
         :param text: The text of this ClassifierRecommendationRequest.
         :type: str
@@ -90,7 +90,7 @@ class ClassifierRecommendationRequest(object):
     def count(self):
         """
         Gets the count of this ClassifierRecommendationRequest.
-
+        How many results you want to see in the response (default value is 3)
 
         :return: The count of this ClassifierRecommendationRequest.
         :rtype: int
@@ -101,7 +101,7 @@ class ClassifierRecommendationRequest(object):
     def count(self, count):
         """
         Sets the count of this ClassifierRecommendationRequest.
-
+        How many results you want to see in the response (default value is 3)
 
         :param count: The count of this ClassifierRecommendationRequest.
         :type: int
@@ -113,7 +113,7 @@ class ClassifierRecommendationRequest(object):
     def use_emphasizing(self):
         """
         Gets the use_emphasizing of this ClassifierRecommendationRequest.
-
+        Use emphasizing algorithm during this recommendation
 
         :return: The use_emphasizing of this ClassifierRecommendationRequest.
         :rtype: bool
@@ -124,7 +124,7 @@ class ClassifierRecommendationRequest(object):
     def use_emphasizing(self, use_emphasizing):
         """
         Sets the use_emphasizing of this ClassifierRecommendationRequest.
-
+        Use emphasizing algorithm during this recommendation
 
         :param use_emphasizing: The use_emphasizing of this ClassifierRecommendationRequest.
         :type: bool
@@ -136,7 +136,7 @@ class ClassifierRecommendationRequest(object):
     def need_tag_in_result(self):
         """
         Gets the need_tag_in_result of this ClassifierRecommendationRequest.
-
+        If you want to see all the tag object in the response
 
         :return: The need_tag_in_result of this ClassifierRecommendationRequest.
         :rtype: bool
@@ -147,7 +147,7 @@ class ClassifierRecommendationRequest(object):
     def need_tag_in_result(self, need_tag_in_result):
         """
         Sets the need_tag_in_result of this ClassifierRecommendationRequest.
-
+        If you want to see all the tag object in the response
 
         :param need_tag_in_result: The need_tag_in_result of this ClassifierRecommendationRequest.
         :type: bool

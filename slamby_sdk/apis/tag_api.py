@@ -239,7 +239,7 @@ class TagApi(object):
 
         :param Tag tag: 
 
-        :return: None
+        :return: Tag
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -301,7 +301,7 @@ class TagApi(object):
                                             body=body_params,
                                             post_params=form_params,
                                             files=local_var_files,
-                                            response_type=None,
+                                            response_type='Tag',
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'))
         return response
@@ -626,7 +626,7 @@ class TagApi(object):
 
         :param Tag tag: 
 
-        :return: Tag
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -697,7 +697,7 @@ class TagApi(object):
                                             body=body_params,
                                             post_params=form_params,
                                             files=local_var_files,
-                                            response_type='Tag',
+                                            response_type=None,
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'))
         return response

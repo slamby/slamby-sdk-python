@@ -40,38 +40,30 @@ class DocumentSampleSettings(object):
         """
         self.swagger_types = {
             'id': 'str',
-            'tag_ids': 'list[str]',
-            'is_stratified': 'bool',
-            'pagination': 'Pagination',
+            'tag_id_list': 'list[str]',
             'percent': 'float',
             'size': 'int',
-            'ids_only': 'bool'
+            'field_list': 'list[str]'
         }
 
         self.attribute_map = {
             'id': 'Id',
-            'tag_ids': 'TagIds',
-            'is_stratified': 'IsStratified',
-            'pagination': 'Pagination',
+            'tag_id_list': 'TagIdList',
             'percent': 'Percent',
             'size': 'Size',
-            'ids_only': 'IdsOnly'
+            'field_list': 'FieldList'
         }
 
 
         self._id = None
 
-        self._tag_ids = None
-
-        self._is_stratified = None
-
-        self._pagination = None
+        self._tag_id_list = None
 
         self._percent = None
 
         self._size = None
 
-        self._ids_only = None
+        self._field_list = None
 
 
 
@@ -79,7 +71,7 @@ class DocumentSampleSettings(object):
     def id(self):
         """
         Gets the id of this DocumentSampleSettings.
-
+        It must be a random string for every new sampling, but must be the same for the same sampling during pagination. \r\n            If you leave it empty then it'll be generated automatically, but then you can not use pagination
 
         :return: The id of this DocumentSampleSettings.
         :rtype: str
@@ -90,7 +82,7 @@ class DocumentSampleSettings(object):
     def id(self, id):
         """
         Sets the id of this DocumentSampleSettings.
-
+        It must be a random string for every new sampling, but must be the same for the same sampling during pagination. \r\n            If you leave it empty then it'll be generated automatically, but then you can not use pagination
 
         :param id: The id of this DocumentSampleSettings.
         :type: str
@@ -99,79 +91,33 @@ class DocumentSampleSettings(object):
 
 
     @property
-    def tag_ids(self):
+    def tag_id_list(self):
         """
-        Gets the tag_ids of this DocumentSampleSettings.
+        Gets the tag_id_list of this DocumentSampleSettings.
+        You can create a sample from a whole dataset, or just from a given tag section. \r\n            To create a sample from the whole dataset please keep it empty. \r\n            To create a sample from a given number of tags please provide the tag ids
 
-
-        :return: The tag_ids of this DocumentSampleSettings.
+        :return: The tag_id_list of this DocumentSampleSettings.
         :rtype: list[str]
         """
-        return self._tag_ids
+        return self._tag_id_list
 
-    @tag_ids.setter
-    def tag_ids(self, tag_ids):
+    @tag_id_list.setter
+    def tag_id_list(self, tag_id_list):
         """
-        Sets the tag_ids of this DocumentSampleSettings.
+        Sets the tag_id_list of this DocumentSampleSettings.
+        You can create a sample from a whole dataset, or just from a given tag section. \r\n            To create a sample from the whole dataset please keep it empty. \r\n            To create a sample from a given number of tags please provide the tag ids
 
-
-        :param tag_ids: The tag_ids of this DocumentSampleSettings.
+        :param tag_id_list: The tag_id_list of this DocumentSampleSettings.
         :type: list[str]
         """
-        self._tag_ids = tag_ids
-
-
-    @property
-    def is_stratified(self):
-        """
-        Gets the is_stratified of this DocumentSampleSettings.
-
-
-        :return: The is_stratified of this DocumentSampleSettings.
-        :rtype: bool
-        """
-        return self._is_stratified
-
-    @is_stratified.setter
-    def is_stratified(self, is_stratified):
-        """
-        Sets the is_stratified of this DocumentSampleSettings.
-
-
-        :param is_stratified: The is_stratified of this DocumentSampleSettings.
-        :type: bool
-        """
-        self._is_stratified = is_stratified
-
-
-    @property
-    def pagination(self):
-        """
-        Gets the pagination of this DocumentSampleSettings.
-
-
-        :return: The pagination of this DocumentSampleSettings.
-        :rtype: Pagination
-        """
-        return self._pagination
-
-    @pagination.setter
-    def pagination(self, pagination):
-        """
-        Sets the pagination of this DocumentSampleSettings.
-
-
-        :param pagination: The pagination of this DocumentSampleSettings.
-        :type: Pagination
-        """
-        self._pagination = pagination
+        self._tag_id_list = tag_id_list
 
 
     @property
     def percent(self):
         """
         Gets the percent of this DocumentSampleSettings.
-
+        Defining the sample size, you can use percentage or a given number. \r\n            Using a percentage you can define the document number by a percentage. \r\n            This percentage will calculate the document number by using the available dataset document number. \r\n            E.g.: if your dataset contains 100.000 documents and you are using 10% as a sampling size without stratified method, your sample size is 100.000 x 10% = 10.000
 
         :return: The percent of this DocumentSampleSettings.
         :rtype: float
@@ -182,7 +128,7 @@ class DocumentSampleSettings(object):
     def percent(self, percent):
         """
         Sets the percent of this DocumentSampleSettings.
-
+        Defining the sample size, you can use percentage or a given number. \r\n            Using a percentage you can define the document number by a percentage. \r\n            This percentage will calculate the document number by using the available dataset document number. \r\n            E.g.: if your dataset contains 100.000 documents and you are using 10% as a sampling size without stratified method, your sample size is 100.000 x 10% = 10.000
 
         :param percent: The percent of this DocumentSampleSettings.
         :type: float
@@ -194,7 +140,7 @@ class DocumentSampleSettings(object):
     def size(self):
         """
         Gets the size of this DocumentSampleSettings.
-
+        Define your sample size by providing a simple integer. \r\n            E.g.: if your dataset contains 100.000 documents and you are using 3.000 as a sampling size without stratified method, your sample size is 3.000
 
         :return: The size of this DocumentSampleSettings.
         :rtype: int
@@ -205,7 +151,7 @@ class DocumentSampleSettings(object):
     def size(self, size):
         """
         Sets the size of this DocumentSampleSettings.
-
+        Define your sample size by providing a simple integer. \r\n            E.g.: if your dataset contains 100.000 documents and you are using 3.000 as a sampling size without stratified method, your sample size is 3.000
 
         :param size: The size of this DocumentSampleSettings.
         :type: int
@@ -214,26 +160,26 @@ class DocumentSampleSettings(object):
 
 
     @property
-    def ids_only(self):
+    def field_list(self):
         """
-        Gets the ids_only of this DocumentSampleSettings.
+        Gets the field_list of this DocumentSampleSettings.
+        Query returns only with the specified field(s)
 
-
-        :return: The ids_only of this DocumentSampleSettings.
-        :rtype: bool
+        :return: The field_list of this DocumentSampleSettings.
+        :rtype: list[str]
         """
-        return self._ids_only
+        return self._field_list
 
-    @ids_only.setter
-    def ids_only(self, ids_only):
+    @field_list.setter
+    def field_list(self, field_list):
         """
-        Sets the ids_only of this DocumentSampleSettings.
+        Sets the field_list of this DocumentSampleSettings.
+        Query returns only with the specified field(s)
 
-
-        :param ids_only: The ids_only of this DocumentSampleSettings.
-        :type: bool
+        :param field_list: The field_list of this DocumentSampleSettings.
+        :type: list[str]
         """
-        self._ids_only = ids_only
+        self._field_list = field_list
 
 
     def to_dict(self):

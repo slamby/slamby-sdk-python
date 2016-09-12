@@ -244,7 +244,7 @@ class DocumentApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
 
-        :param Object document: 
+        :param object document: 
 
         :return: None
                  If the method is called asynchronously,
@@ -428,7 +428,7 @@ class DocumentApi(object):
 
         :param str id:  (required)
 
-        :return: Object
+        :return: object
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -494,13 +494,13 @@ class DocumentApi(object):
                                             body=body_params,
                                             post_params=form_params,
                                             files=local_var_files,
-                                            response_type='Object',
+                                            response_type='object',
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'))
         return response
 
 
-    def get_filtered_documents(self, **kwargs):
+    def get_filtered_documents(self, scroll_id, **kwargs):
         """
         
         
@@ -512,12 +512,14 @@ class DocumentApi(object):
         >>>     pprint(response)
         >>>
 
-        >>> thread = api.get_filtered_documents(callback=callback_function)
+        >>> thread = api.get_filtered_documents(scroll_id, callback=callback_function)
 
 
 
         :param callback function: The callback function
             for asynchronous request. (optional)
+
+        :param str scroll_id:  (required)
 
         :param DocumentFilterSettings filter_settings: 
 
@@ -526,7 +528,7 @@ class DocumentApi(object):
                  returns the request thread.
         """
 
-        all_params = ['filter_settings']
+        all_params = ['scroll_id', 'filter_settings']
         all_params.append('callback')
 
         params = locals()
@@ -541,10 +543,19 @@ class DocumentApi(object):
 
 
 
+        # verify the required parameter 'scroll_id' is set
+        if ('scroll_id' not in params) or (params['scroll_id'] is None):
+            raise ValueError("Missing the required parameter `scroll_id` when calling `get_filtered_documents`")
 
 
-        resource_path = '/api/Documents/Filter'.replace('{format}', 'json')
+
+
+
+        resource_path = '/api/Documents/Filter/{scrollId}'.replace('{format}', 'json')
         path_params = {}
+
+        if 'scroll_id' in params:
+            path_params['scrollId'] = params['scroll_id']
 
 
         query_params = {}
@@ -788,9 +799,9 @@ class DocumentApi(object):
 
         :param str id:  (required)
 
-        :param Object document: 
+        :param object document: 
 
-        :return: Object
+        :return: object
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -861,7 +872,7 @@ class DocumentApi(object):
                                             body=body_params,
                                             post_params=form_params,
                                             files=local_var_files,
-                                            response_type='Object',
+                                            response_type='object',
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'))
         return response

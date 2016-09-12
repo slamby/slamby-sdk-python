@@ -39,7 +39,7 @@ class DocumentBulkSettings(object):
                                   and the value is json key in definition.
         """
         self.swagger_types = {
-            'documents': 'list[Object]'
+            'documents': 'list[object]'
         }
 
         self.attribute_map = {
@@ -55,10 +55,10 @@ class DocumentBulkSettings(object):
     def documents(self):
         """
         Gets the documents of this DocumentBulkSettings.
-
+        Array of the documents to be saved
 
         :return: The documents of this DocumentBulkSettings.
-        :rtype: list[Object]
+        :rtype: list[object]
         """
         return self._documents
 
@@ -66,10 +66,10 @@ class DocumentBulkSettings(object):
     def documents(self, documents):
         """
         Sets the documents of this DocumentBulkSettings.
-
+        Array of the documents to be saved
 
         :param documents: The documents of this DocumentBulkSettings.
-        :type: list[Object]
+        :type: list[object]
         """
         self._documents = documents
 

@@ -67,7 +67,7 @@ class Tag(object):
     def id(self):
         """
         Gets the id of this Tag.
-
+        The identifier of the tag. It must be unique across the DataSet
 
         :return: The id of this Tag.
         :rtype: str
@@ -78,7 +78,7 @@ class Tag(object):
     def id(self, id):
         """
         Sets the id of this Tag.
-
+        The identifier of the tag. It must be unique across the DataSet
 
         :param id: The id of this Tag.
         :type: str
@@ -90,7 +90,7 @@ class Tag(object):
     def name(self):
         """
         Gets the name of this Tag.
-
+        \"Name of the tag
 
         :return: The name of this Tag.
         :rtype: str
@@ -101,7 +101,7 @@ class Tag(object):
     def name(self, name):
         """
         Sets the name of this Tag.
-
+        \"Name of the tag
 
         :param name: The name of this Tag.
         :type: str
@@ -113,7 +113,7 @@ class Tag(object):
     def parent_id(self):
         """
         Gets the parent_id of this Tag.
-
+        The identifier of the parent of the tag. It must be the id of an existing tag
 
         :return: The parent_id of this Tag.
         :rtype: str
@@ -124,7 +124,7 @@ class Tag(object):
     def parent_id(self, parent_id):
         """
         Sets the parent_id of this Tag.
-
+        The identifier of the parent of the tag. It must be the id of an existing tag
 
         :param parent_id: The parent_id of this Tag.
         :type: str
@@ -136,7 +136,7 @@ class Tag(object):
     def properties(self):
         """
         Gets the properties of this Tag.
-
+        Tag properties
 
         :return: The properties of this Tag.
         :rtype: TagProperties
@@ -147,7 +147,7 @@ class Tag(object):
     def properties(self, properties):
         """
         Sets the properties of this Tag.
-
+        Tag properties
 
         :param properties: The properties of this Tag.
         :type: TagProperties

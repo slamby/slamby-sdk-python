@@ -40,18 +40,26 @@ class PrcPrepareSettings(object):
         """
         self.swagger_types = {
             'data_set_name': 'str',
-            'tag_id_list': 'list[str]'
+            'tag_id_list': 'list[str]',
+            'compress_level': 'int',
+            'compress_settings': 'CompressSettings'
         }
 
         self.attribute_map = {
             'data_set_name': 'DataSetName',
-            'tag_id_list': 'TagIdList'
+            'tag_id_list': 'TagIdList',
+            'compress_level': 'CompressLevel',
+            'compress_settings': 'CompressSettings'
         }
 
 
         self._data_set_name = None
 
         self._tag_id_list = None
+
+        self._compress_level = None
+
+        self._compress_settings = None
 
 
 
@@ -82,7 +90,7 @@ class PrcPrepareSettings(object):
     def tag_id_list(self):
         """
         Gets the tag_id_list of this PrcPrepareSettings.
-
+        
 
         :return: The tag_id_list of this PrcPrepareSettings.
         :rtype: list[str]
@@ -93,12 +101,58 @@ class PrcPrepareSettings(object):
     def tag_id_list(self, tag_id_list):
         """
         Sets the tag_id_list of this PrcPrepareSettings.
-
+        
 
         :param tag_id_list: The tag_id_list of this PrcPrepareSettings.
         :type: list[str]
         """
         self._tag_id_list = tag_id_list
+
+
+    @property
+    def compress_level(self):
+        """
+        Gets the compress_level of this PrcPrepareSettings.
+        
+
+        :return: The compress_level of this PrcPrepareSettings.
+        :rtype: int
+        """
+        return self._compress_level
+
+    @compress_level.setter
+    def compress_level(self, compress_level):
+        """
+        Sets the compress_level of this PrcPrepareSettings.
+        
+
+        :param compress_level: The compress_level of this PrcPrepareSettings.
+        :type: int
+        """
+        self._compress_level = compress_level
+
+
+    @property
+    def compress_settings(self):
+        """
+        Gets the compress_settings of this PrcPrepareSettings.
+        
+
+        :return: The compress_settings of this PrcPrepareSettings.
+        :rtype: CompressSettings
+        """
+        return self._compress_settings
+
+    @compress_settings.setter
+    def compress_settings(self, compress_settings):
+        """
+        Sets the compress_settings of this PrcPrepareSettings.
+        
+
+        :param compress_settings: The compress_settings of this PrcPrepareSettings.
+        :type: CompressSettings
+        """
+        self._compress_settings = compress_settings
 
 
     def to_dict(self):

@@ -39,58 +39,23 @@ class Pagination(object):
                                   and the value is json key in definition.
         """
         self.swagger_types = {
-            'offset': 'int',
-            'limit': 'int',
-            'order_direction': 'str',
-            'order_by_field': 'str'
+            'limit': 'int'
         }
 
         self.attribute_map = {
-            'offset': 'Offset',
-            'limit': 'Limit',
-            'order_direction': 'OrderDirection',
-            'order_by_field': 'OrderByField'
+            'limit': 'Limit'
         }
 
 
-        self._offset = None
-
         self._limit = None
 
-        self._order_direction = None
-
-        self._order_by_field = None
-
-
-
-    @property
-    def offset(self):
-        """
-        Gets the offset of this Pagination.
-
-
-        :return: The offset of this Pagination.
-        :rtype: int
-        """
-        return self._offset
-
-    @offset.setter
-    def offset(self, offset):
-        """
-        Sets the offset of this Pagination.
-
-
-        :param offset: The offset of this Pagination.
-        :type: int
-        """
-        self._offset = offset
 
 
     @property
     def limit(self):
         """
         Gets the limit of this Pagination.
-
+        How many element you want to get back in this request
 
         :return: The limit of this Pagination.
         :rtype: int
@@ -101,64 +66,12 @@ class Pagination(object):
     def limit(self, limit):
         """
         Sets the limit of this Pagination.
-
+        How many element you want to get back in this request
 
         :param limit: The limit of this Pagination.
         :type: int
         """
         self._limit = limit
-
-
-    @property
-    def order_direction(self):
-        """
-        Gets the order_direction of this Pagination.
-
-
-        :return: The order_direction of this Pagination.
-        :rtype: str
-        """
-        return self._order_direction
-
-    @order_direction.setter
-    def order_direction(self, order_direction):
-        """
-        Sets the order_direction of this Pagination.
-
-
-        :param order_direction: The order_direction of this Pagination.
-        :type: str
-        """
-        allowed_values = ["Asc", "Desc"]
-        if order_direction not in allowed_values:
-            raise ValueError(
-                "Invalid value for `order_direction`, must be one of {0}"
-                .format(allowed_values)
-            )
-        self._order_direction = order_direction
-
-
-    @property
-    def order_by_field(self):
-        """
-        Gets the order_by_field of this Pagination.
-
-
-        :return: The order_by_field of this Pagination.
-        :rtype: str
-        """
-        return self._order_by_field
-
-    @order_by_field.setter
-    def order_by_field(self, order_by_field):
-        """
-        Sets the order_by_field of this Pagination.
-
-
-        :param order_by_field: The order_by_field of this Pagination.
-        :type: str
-        """
-        self._order_by_field = order_by_field
 
 
     def to_dict(self):

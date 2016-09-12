@@ -63,7 +63,7 @@ class ClassifierActivateSettings(object):
     def emphasized_tag_id_list(self):
         """
         Gets the emphasized_tag_id_list of this ClassifierActivateSettings.
-
+        The list of the tag Ids which will emphasized during the recommendation
 
         :return: The emphasized_tag_id_list of this ClassifierActivateSettings.
         :rtype: list[str]
@@ -74,7 +74,7 @@ class ClassifierActivateSettings(object):
     def emphasized_tag_id_list(self, emphasized_tag_id_list):
         """
         Sets the emphasized_tag_id_list of this ClassifierActivateSettings.
-
+        The list of the tag Ids which will emphasized during the recommendation
 
         :param emphasized_tag_id_list: The emphasized_tag_id_list of this ClassifierActivateSettings.
         :type: list[str]
@@ -86,7 +86,7 @@ class ClassifierActivateSettings(object):
     def tag_id_list(self):
         """
         Gets the tag_id_list of this ClassifierActivateSettings.
-
+        \"The list of the tag Ids which will be activated (the recommendation will be contains these only)
 
         :return: The tag_id_list of this ClassifierActivateSettings.
         :rtype: list[str]
@@ -97,7 +97,7 @@ class ClassifierActivateSettings(object):
     def tag_id_list(self, tag_id_list):
         """
         Sets the tag_id_list of this ClassifierActivateSettings.
-
+        \"The list of the tag Ids which will be activated (the recommendation will be contains these only)
 
         :param tag_id_list: The tag_id_list of this ClassifierActivateSettings.
         :type: list[str]
@@ -109,7 +109,7 @@ class ClassifierActivateSettings(object):
     def n_gram_list(self):
         """
         Gets the n_gram_list of this ClassifierActivateSettings.
-
+        The list of the NGrams will be activated (the recommendation algorithm will be use these only)
 
         :return: The n_gram_list of this ClassifierActivateSettings.
         :rtype: list[int]
@@ -120,7 +120,7 @@ class ClassifierActivateSettings(object):
     def n_gram_list(self, n_gram_list):
         """
         Sets the n_gram_list of this ClassifierActivateSettings.
-
+        The list of the NGrams will be activated (the recommendation algorithm will be use these only)
 
         :param n_gram_list: The n_gram_list of this ClassifierActivateSettings.
         :type: list[int]

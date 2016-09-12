@@ -47,7 +47,7 @@ class ClassifierServiceApi(object):
             self.api_client = config.api_client
 
 
-    def activate_service(self, id, **kwargs):
+    def classifier_activate_service(self, id, **kwargs):
         """
         
         
@@ -59,7 +59,7 @@ class ClassifierServiceApi(object):
         >>>     pprint(response)
         >>>
 
-        >>> thread = api.activate_service(id, callback=callback_function)
+        >>> thread = api.classifier_activate_service(id, callback=callback_function)
 
 
 
@@ -70,7 +70,7 @@ class ClassifierServiceApi(object):
 
         :param ClassifierActivateSettings classifier_activate_settings: 
 
-        :return: None
+        :return: Process
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -83,7 +83,7 @@ class ClassifierServiceApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method activate_service" % key
+                    " to method classifier_activate_service" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -92,7 +92,7 @@ class ClassifierServiceApi(object):
 
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `activate_service`")
+            raise ValueError("Missing the required parameter `id` when calling `classifier_activate_service`")
 
 
 
@@ -141,13 +141,13 @@ class ClassifierServiceApi(object):
                                             body=body_params,
                                             post_params=form_params,
                                             files=local_var_files,
-                                            response_type=None,
+                                            response_type='Process',
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'))
         return response
 
 
-    def deactivate_service(self, id, **kwargs):
+    def classifier_deactivate_service(self, id, **kwargs):
         """
         
         
@@ -159,7 +159,7 @@ class ClassifierServiceApi(object):
         >>>     pprint(response)
         >>>
 
-        >>> thread = api.deactivate_service(id, callback=callback_function)
+        >>> thread = api.classifier_deactivate_service(id, callback=callback_function)
 
 
 
@@ -181,7 +181,7 @@ class ClassifierServiceApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method deactivate_service" % key
+                    " to method classifier_deactivate_service" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -190,7 +190,7 @@ class ClassifierServiceApi(object):
 
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `deactivate_service`")
+            raise ValueError("Missing the required parameter `id` when calling `classifier_deactivate_service`")
 
 
 
@@ -240,7 +240,7 @@ class ClassifierServiceApi(object):
         return response
 
 
-    def export_dictionaries(self, id, **kwargs):
+    def classifier_export_dictionaries(self, id, **kwargs):
         """
         
         
@@ -252,7 +252,7 @@ class ClassifierServiceApi(object):
         >>>     pprint(response)
         >>>
 
-        >>> thread = api.export_dictionaries(id, callback=callback_function)
+        >>> thread = api.classifier_export_dictionaries(id, callback=callback_function)
 
 
 
@@ -276,7 +276,7 @@ class ClassifierServiceApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method export_dictionaries" % key
+                    " to method classifier_export_dictionaries" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -285,7 +285,7 @@ class ClassifierServiceApi(object):
 
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `export_dictionaries`")
+            raise ValueError("Missing the required parameter `id` when calling `classifier_export_dictionaries`")
 
 
 
@@ -340,7 +340,7 @@ class ClassifierServiceApi(object):
         return response
 
 
-    def get_service(self, id, **kwargs):
+    def classifier_get_service(self, id, **kwargs):
         """
         
         
@@ -352,7 +352,7 @@ class ClassifierServiceApi(object):
         >>>     pprint(response)
         >>>
 
-        >>> thread = api.get_service(id, callback=callback_function)
+        >>> thread = api.classifier_get_service(id, callback=callback_function)
 
 
 
@@ -374,7 +374,7 @@ class ClassifierServiceApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_service" % key
+                    " to method classifier_get_service" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -383,7 +383,7 @@ class ClassifierServiceApi(object):
 
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `get_service`")
+            raise ValueError("Missing the required parameter `id` when calling `classifier_get_service`")
 
 
 
@@ -433,7 +433,7 @@ class ClassifierServiceApi(object):
         return response
 
 
-    def prepare_service(self, id, **kwargs):
+    def classifier_prepare_service(self, id, **kwargs):
         """
         
         
@@ -445,7 +445,7 @@ class ClassifierServiceApi(object):
         >>>     pprint(response)
         >>>
 
-        >>> thread = api.prepare_service(id, callback=callback_function)
+        >>> thread = api.classifier_prepare_service(id, callback=callback_function)
 
 
 
@@ -469,7 +469,7 @@ class ClassifierServiceApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method prepare_service" % key
+                    " to method classifier_prepare_service" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -478,7 +478,7 @@ class ClassifierServiceApi(object):
 
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `prepare_service`")
+            raise ValueError("Missing the required parameter `id` when calling `classifier_prepare_service`")
 
 
 
@@ -533,7 +533,7 @@ class ClassifierServiceApi(object):
         return response
 
 
-    def recommend_service(self, id, **kwargs):
+    def classifier_recommend_service(self, id, **kwargs):
         """
         
         
@@ -545,7 +545,7 @@ class ClassifierServiceApi(object):
         >>>     pprint(response)
         >>>
 
-        >>> thread = api.recommend_service(id, callback=callback_function)
+        >>> thread = api.classifier_recommend_service(id, callback=callback_function)
 
 
 
@@ -569,7 +569,7 @@ class ClassifierServiceApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method recommend_service" % key
+                    " to method classifier_recommend_service" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -578,7 +578,7 @@ class ClassifierServiceApi(object):
 
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `recommend_service`")
+            raise ValueError("Missing the required parameter `id` when calling `classifier_recommend_service`")
 
 
 

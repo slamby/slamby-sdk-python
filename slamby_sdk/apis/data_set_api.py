@@ -136,6 +136,95 @@ class DataSetApi(object):
         return response
 
 
+    def create_data_set_schema(self, **kwargs):
+        """
+        
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+
+        >>> thread = api.create_data_set_schema(callback=callback_function)
+
+
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+
+        :param DataSet data_set: 
+
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['data_set']
+        all_params.append('callback')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_data_set_schema" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+
+
+
+
+        resource_path = '/api/DataSets/Schema'.replace('{format}', 'json')
+        path_params = {}
+
+
+        query_params = {}
+
+
+        header_params = {}
+
+
+        form_params = []
+        local_var_files = {}
+
+
+        body_params = None
+
+        if 'data_set' in params:
+            body_params = params['data_set']
+
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept([])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type([])
+
+        # Authentication setting
+        auth_settings = []
+
+        response = self.api_client.call_api(resource_path, 'POST',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type=None,
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'))
+        return response
+
+
     def delete_data_set(self, name, **kwargs):
         """
         
@@ -399,6 +488,106 @@ class DataSetApi(object):
                                             post_params=form_params,
                                             files=local_var_files,
                                             response_type='list[DataSet]',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'))
+        return response
+
+
+    def update_data_set(self, existing_name, **kwargs):
+        """
+        
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+
+        >>> thread = api.update_data_set(existing_name, callback=callback_function)
+
+
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+
+        :param str existing_name:  (required)
+
+        :param DataSetUpdate data_set_update: 
+
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['existing_name', 'data_set_update']
+        all_params.append('callback')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_data_set" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+
+
+        # verify the required parameter 'existing_name' is set
+        if ('existing_name' not in params) or (params['existing_name'] is None):
+            raise ValueError("Missing the required parameter `existing_name` when calling `update_data_set`")
+
+
+
+
+
+        resource_path = '/api/DataSets/{existingName}'.replace('{format}', 'json')
+        path_params = {}
+
+        if 'existing_name' in params:
+            path_params['existingName'] = params['existing_name']
+
+
+        query_params = {}
+
+
+        header_params = {}
+
+
+        form_params = []
+        local_var_files = {}
+
+
+        body_params = None
+
+        if 'data_set_update' in params:
+            body_params = params['data_set_update']
+
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept([])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type([])
+
+        # Authentication setting
+        auth_settings = []
+
+        response = self.api_client.call_api(resource_path, 'PUT',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type=None,
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'))
         return response

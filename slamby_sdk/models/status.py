@@ -75,7 +75,7 @@ class Status(object):
     def api_version(self):
         """
         Gets the api_version of this Status.
-
+        API version string
 
         :return: The api_version of this Status.
         :rtype: str
@@ -86,7 +86,7 @@ class Status(object):
     def api_version(self, api_version):
         """
         Sets the api_version of this Status.
-
+        API version string
 
         :param api_version: The api_version of this Status.
         :type: str
@@ -98,7 +98,7 @@ class Status(object):
     def processor_count(self):
         """
         Gets the processor_count of this Status.
-
+        Number of processors on the API machine
 
         :return: The processor_count of this Status.
         :rtype: int
@@ -109,7 +109,7 @@ class Status(object):
     def processor_count(self, processor_count):
         """
         Sets the processor_count of this Status.
-
+        Number of processors on the API machine
 
         :param processor_count: The processor_count of this Status.
         :type: int
@@ -121,7 +121,7 @@ class Status(object):
     def cpu_usage(self):
         """
         Gets the cpu_usage of this Status.
-
+        CPU usage %
 
         :return: The cpu_usage of this Status.
         :rtype: float
@@ -132,7 +132,7 @@ class Status(object):
     def cpu_usage(self, cpu_usage):
         """
         Sets the cpu_usage of this Status.
-
+        CPU usage %
 
         :param cpu_usage: The cpu_usage of this Status.
         :type: float
@@ -144,7 +144,7 @@ class Status(object):
     def available_free_space(self):
         """
         Gets the available_free_space of this Status.
-
+        Available free disk space in MB
 
         :return: The available_free_space of this Status.
         :rtype: float
@@ -155,7 +155,7 @@ class Status(object):
     def available_free_space(self, available_free_space):
         """
         Sets the available_free_space of this Status.
-
+        Available free disk space in MB
 
         :param available_free_space: The available_free_space of this Status.
         :type: float
@@ -167,7 +167,7 @@ class Status(object):
     def total_memory(self):
         """
         Gets the total_memory of this Status.
-
+        Total physical memory in MB
 
         :return: The total_memory of this Status.
         :rtype: float
@@ -178,7 +178,7 @@ class Status(object):
     def total_memory(self, total_memory):
         """
         Sets the total_memory of this Status.
-
+        Total physical memory in MB
 
         :param total_memory: The total_memory of this Status.
         :type: float
@@ -190,7 +190,7 @@ class Status(object):
     def free_memory(self):
         """
         Gets the free_memory of this Status.
-
+        Free physical memory in MB
 
         :return: The free_memory of this Status.
         :rtype: float
@@ -201,7 +201,7 @@ class Status(object):
     def free_memory(self, free_memory):
         """
         Sets the free_memory of this Status.
-
+        Free physical memory in MB
 
         :param free_memory: The free_memory of this Status.
         :type: float

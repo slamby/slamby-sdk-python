@@ -40,32 +40,32 @@ class PrcRecommendationRequest(object):
         """
         self.swagger_types = {
             'text': 'str',
+            'filter': 'Filter',
             'count': 'int',
             'need_document_in_result': 'bool',
             'tag_id': 'str',
-            'filter': 'Filter',
             'weights': 'list[Weight]'
         }
 
         self.attribute_map = {
             'text': 'Text',
+            'filter': 'Filter',
             'count': 'Count',
             'need_document_in_result': 'NeedDocumentInResult',
             'tag_id': 'TagId',
-            'filter': 'Filter',
             'weights': 'Weights'
         }
 
 
         self._text = None
 
+        self._filter = None
+
         self._count = None
 
         self._need_document_in_result = None
 
         self._tag_id = None
-
-        self._filter = None
 
         self._weights = None
 
@@ -92,6 +92,29 @@ class PrcRecommendationRequest(object):
         :type: str
         """
         self._text = text
+
+
+    @property
+    def filter(self):
+        """
+        Gets the filter of this PrcRecommendationRequest.
+
+
+        :return: The filter of this PrcRecommendationRequest.
+        :rtype: Filter
+        """
+        return self._filter
+
+    @filter.setter
+    def filter(self, filter):
+        """
+        Sets the filter of this PrcRecommendationRequest.
+
+
+        :param filter: The filter of this PrcRecommendationRequest.
+        :type: Filter
+        """
+        self._filter = filter
 
 
     @property
@@ -161,29 +184,6 @@ class PrcRecommendationRequest(object):
         :type: str
         """
         self._tag_id = tag_id
-
-
-    @property
-    def filter(self):
-        """
-        Gets the filter of this PrcRecommendationRequest.
-
-
-        :return: The filter of this PrcRecommendationRequest.
-        :rtype: Filter
-        """
-        return self._filter
-
-    @filter.setter
-    def filter(self, filter):
-        """
-        Sets the filter of this PrcRecommendationRequest.
-
-
-        :param filter: The filter of this PrcRecommendationRequest.
-        :type: Filter
-        """
-        self._filter = filter
 
 
     @property

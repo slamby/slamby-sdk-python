@@ -39,7 +39,7 @@ class TagProperties(object):
                                   and the value is json key in definition.
         """
         self.swagger_types = {
-            'path': 'list[PathItem]',
+            'paths': 'list[PathItem]',
             'level': 'int',
             'is_leaf': 'bool',
             'document_count': 'int',
@@ -47,7 +47,7 @@ class TagProperties(object):
         }
 
         self.attribute_map = {
-            'path': 'Path',
+            'paths': 'Paths',
             'level': 'Level',
             'is_leaf': 'IsLeaf',
             'document_count': 'DocumentCount',
@@ -55,7 +55,7 @@ class TagProperties(object):
         }
 
 
-        self._path = None
+        self._paths = None
 
         self._level = None
 
@@ -68,33 +68,33 @@ class TagProperties(object):
 
 
     @property
-    def path(self):
+    def paths(self):
         """
-        Gets the path of this TagProperties.
+        Gets the paths of this TagProperties.
+        A tag list contains parent path elements
 
-
-        :return: The path of this TagProperties.
+        :return: The paths of this TagProperties.
         :rtype: list[PathItem]
         """
-        return self._path
+        return self._paths
 
-    @path.setter
-    def path(self, path):
+    @paths.setter
+    def paths(self, paths):
         """
-        Sets the path of this TagProperties.
+        Sets the paths of this TagProperties.
+        A tag list contains parent path elements
 
-
-        :param path: The path of this TagProperties.
+        :param paths: The paths of this TagProperties.
         :type: list[PathItem]
         """
-        self._path = path
+        self._paths = paths
 
 
     @property
     def level(self):
         """
         Gets the level of this TagProperties.
-
+        The level of the tag in the hierarchy (root level is: 0)
 
         :return: The level of this TagProperties.
         :rtype: int
@@ -105,7 +105,7 @@ class TagProperties(object):
     def level(self, level):
         """
         Sets the level of this TagProperties.
-
+        The level of the tag in the hierarchy (root level is: 0)
 
         :param level: The level of this TagProperties.
         :type: int
@@ -117,7 +117,7 @@ class TagProperties(object):
     def is_leaf(self):
         """
         Gets the is_leaf of this TagProperties.
-
+        If the tag is a leaf tag. Leaf tag means the tag is not a parent of any other tags
 
         :return: The is_leaf of this TagProperties.
         :rtype: bool
@@ -128,7 +128,7 @@ class TagProperties(object):
     def is_leaf(self, is_leaf):
         """
         Sets the is_leaf of this TagProperties.
-
+        If the tag is a leaf tag. Leaf tag means the tag is not a parent of any other tags
 
         :param is_leaf: The is_leaf of this TagProperties.
         :type: bool
@@ -140,7 +140,7 @@ class TagProperties(object):
     def document_count(self):
         """
         Gets the document_count of this TagProperties.
-
+        Document count for the tag
 
         :return: The document_count of this TagProperties.
         :rtype: int
@@ -151,7 +151,7 @@ class TagProperties(object):
     def document_count(self, document_count):
         """
         Sets the document_count of this TagProperties.
-
+        Document count for the tag
 
         :param document_count: The document_count of this TagProperties.
         :type: int
@@ -163,7 +163,7 @@ class TagProperties(object):
     def word_count(self):
         """
         Gets the word_count of this TagProperties.
-
+        Word count for the tag
 
         :return: The word_count of this TagProperties.
         :rtype: int
@@ -174,7 +174,7 @@ class TagProperties(object):
     def word_count(self, word_count):
         """
         Sets the word_count of this TagProperties.
-
+        Word count for the tag
 
         :param word_count: The word_count of this TagProperties.
         :type: int

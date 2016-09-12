@@ -55,7 +55,7 @@ class BulkResults(object):
     def results(self):
         """
         Gets the results of this BulkResults.
-
+        Array of the documents to be saved
 
         :return: The results of this BulkResults.
         :rtype: list[BulkResult]
@@ -66,7 +66,7 @@ class BulkResults(object):
     def results(self, results):
         """
         Sets the results of this BulkResults.
-
+        Array of the documents to be saved
 
         :param results: The results of this BulkResults.
         :type: list[BulkResult]

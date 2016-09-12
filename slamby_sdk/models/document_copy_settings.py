@@ -39,50 +39,50 @@ class DocumentCopySettings(object):
                                   and the value is json key in definition.
         """
         self.swagger_types = {
-            'ids': 'list[str]',
+            'document_id_list': 'list[str]',
             'target_data_set_name': 'str'
         }
 
         self.attribute_map = {
-            'ids': 'Ids',
+            'document_id_list': 'DocumentIdList',
             'target_data_set_name': 'TargetDataSetName'
         }
 
 
-        self._ids = None
+        self._document_id_list = None
 
         self._target_data_set_name = None
 
 
 
     @property
-    def ids(self):
+    def document_id_list(self):
         """
-        Gets the ids of this DocumentCopySettings.
+        Gets the document_id_list of this DocumentCopySettings.
+        The Id list of the documents you want to copy
 
-
-        :return: The ids of this DocumentCopySettings.
+        :return: The document_id_list of this DocumentCopySettings.
         :rtype: list[str]
         """
-        return self._ids
+        return self._document_id_list
 
-    @ids.setter
-    def ids(self, ids):
+    @document_id_list.setter
+    def document_id_list(self, document_id_list):
         """
-        Sets the ids of this DocumentCopySettings.
+        Sets the document_id_list of this DocumentCopySettings.
+        The Id list of the documents you want to copy
 
-
-        :param ids: The ids of this DocumentCopySettings.
+        :param document_id_list: The document_id_list of this DocumentCopySettings.
         :type: list[str]
         """
-        self._ids = ids
+        self._document_id_list = document_id_list
 
 
     @property
     def target_data_set_name(self):
         """
         Gets the target_data_set_name of this DocumentCopySettings.
-
+        The DataSet name where you want to copy the selected documents
 
         :return: The target_data_set_name of this DocumentCopySettings.
         :rtype: str
@@ -93,7 +93,7 @@ class DocumentCopySettings(object):
     def target_data_set_name(self, target_data_set_name):
         """
         Sets the target_data_set_name of this DocumentCopySettings.
-
+        The DataSet name where you want to copy the selected documents
 
         :param target_data_set_name: The target_data_set_name of this DocumentCopySettings.
         :type: str

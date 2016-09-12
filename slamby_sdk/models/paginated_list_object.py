@@ -39,27 +39,27 @@ class PaginatedListObject(object):
                                   and the value is json key in definition.
         """
         self.swagger_types = {
-            'items': 'list[Object]',
-            'pagination': 'Pagination',
+            'items': 'list[object]',
             'count': 'int',
-            'total': 'int'
+            'total': 'int',
+            'scroll_id': 'str'
         }
 
         self.attribute_map = {
             'items': 'Items',
-            'pagination': 'Pagination',
             'count': 'Count',
-            'total': 'Total'
+            'total': 'Total',
+            'scroll_id': 'ScrollId'
         }
 
 
         self._items = None
 
-        self._pagination = None
-
         self._count = None
 
         self._total = None
+
+        self._scroll_id = None
 
 
 
@@ -67,10 +67,10 @@ class PaginatedListObject(object):
     def items(self):
         """
         Gets the items of this PaginatedListObject.
-
+        Containing the actual displayed items. The type of the elements depend on the method
 
         :return: The items of this PaginatedListObject.
-        :rtype: list[Object]
+        :rtype: list[object]
         """
         return self._items
 
@@ -78,42 +78,19 @@ class PaginatedListObject(object):
     def items(self, items):
         """
         Sets the items of this PaginatedListObject.
-
+        Containing the actual displayed items. The type of the elements depend on the method
 
         :param items: The items of this PaginatedListObject.
-        :type: list[Object]
+        :type: list[object]
         """
         self._items = items
-
-
-    @property
-    def pagination(self):
-        """
-        Gets the pagination of this PaginatedListObject.
-
-
-        :return: The pagination of this PaginatedListObject.
-        :rtype: Pagination
-        """
-        return self._pagination
-
-    @pagination.setter
-    def pagination(self, pagination):
-        """
-        Sets the pagination of this PaginatedListObject.
-
-
-        :param pagination: The pagination of this PaginatedListObject.
-        :type: Pagination
-        """
-        self._pagination = pagination
 
 
     @property
     def count(self):
         """
         Gets the count of this PaginatedListObject.
-
+        The count of the actual returned items
 
         :return: The count of this PaginatedListObject.
         :rtype: int
@@ -124,7 +101,7 @@ class PaginatedListObject(object):
     def count(self, count):
         """
         Sets the count of this PaginatedListObject.
-
+        The count of the actual returned items
 
         :param count: The count of this PaginatedListObject.
         :type: int
@@ -136,7 +113,7 @@ class PaginatedListObject(object):
     def total(self):
         """
         Gets the total of this PaginatedListObject.
-
+        The count of all items which are the pagination applied
 
         :return: The total of this PaginatedListObject.
         :rtype: int
@@ -147,12 +124,35 @@ class PaginatedListObject(object):
     def total(self, total):
         """
         Sets the total of this PaginatedListObject.
-
+        The count of all items which are the pagination applied
 
         :param total: The total of this PaginatedListObject.
         :type: int
         """
         self._total = total
+
+
+    @property
+    def scroll_id(self):
+        """
+        Gets the scroll_id of this PaginatedListObject.
+        Identifier for the next series of items where it is applicable
+
+        :return: The scroll_id of this PaginatedListObject.
+        :rtype: str
+        """
+        return self._scroll_id
+
+    @scroll_id.setter
+    def scroll_id(self, scroll_id):
+        """
+        Sets the scroll_id of this PaginatedListObject.
+        Identifier for the next series of items where it is applicable
+
+        :param scroll_id: The scroll_id of this PaginatedListObject.
+        :type: str
+        """
+        self._scroll_id = scroll_id
 
 
     def to_dict(self):

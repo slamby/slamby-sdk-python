@@ -87,7 +87,7 @@ class Process(object):
     def id(self):
         """
         Gets the id of this Process.
-
+        The process GUID identifier
 
         :return: The id of this Process.
         :rtype: str
@@ -98,7 +98,7 @@ class Process(object):
     def id(self, id):
         """
         Sets the id of this Process.
-
+        The process GUID identifier
 
         :param id: The id of this Process.
         :type: str
@@ -110,7 +110,7 @@ class Process(object):
     def start(self):
         """
         Gets the start of this Process.
-
+        The UTC time of the process start
 
         :return: The start of this Process.
         :rtype: datetime
@@ -121,7 +121,7 @@ class Process(object):
     def start(self, start):
         """
         Sets the start of this Process.
-
+        The UTC time of the process start
 
         :param start: The start of this Process.
         :type: datetime
@@ -133,7 +133,7 @@ class Process(object):
     def end(self):
         """
         Gets the end of this Process.
-
+        The UTC time of the process end
 
         :return: The end of this Process.
         :rtype: datetime
@@ -144,7 +144,7 @@ class Process(object):
     def end(self, end):
         """
         Sets the end of this Process.
-
+        The UTC time of the process end
 
         :param end: The end of this Process.
         :type: datetime
@@ -156,7 +156,7 @@ class Process(object):
     def percent(self):
         """
         Gets the percent of this Process.
-
+        The percent of the whole process. (e.g.: 12.23 means 12.23%)
 
         :return: The percent of this Process.
         :rtype: float
@@ -167,7 +167,7 @@ class Process(object):
     def percent(self, percent):
         """
         Sets the percent of this Process.
-
+        The percent of the whole process. (e.g.: 12.23 means 12.23%)
 
         :param percent: The percent of this Process.
         :type: float
@@ -179,7 +179,7 @@ class Process(object):
     def description(self):
         """
         Gets the description of this Process.
-
+        Process description
 
         :return: The description of this Process.
         :rtype: str
@@ -190,7 +190,7 @@ class Process(object):
     def description(self, description):
         """
         Sets the description of this Process.
-
+        Process description
 
         :param description: The description of this Process.
         :type: str
@@ -202,7 +202,7 @@ class Process(object):
     def status(self):
         """
         Gets the status of this Process.
-
+        InProgress - the process is in progress, it's working |\r\n            Cancelled - the process was cancelled by the user |\r\n            Finished - the process was finished successfully |\r\n            Error - the process stopped by an error, see the ErrorMessages for detailed information |\r\n            Interrupted - the process was interrupted by an unknown event (e.g.: server restart) - under development |\r\n            Paused - the process was paused  - under development
 
         :return: The status of this Process.
         :rtype: str
@@ -213,12 +213,12 @@ class Process(object):
     def status(self, status):
         """
         Sets the status of this Process.
-
+        InProgress - the process is in progress, it's working |\r\n            Cancelled - the process was cancelled by the user |\r\n            Finished - the process was finished successfully |\r\n            Error - the process stopped by an error, see the ErrorMessages for detailed information |\r\n            Interrupted - the process was interrupted by an unknown event (e.g.: server restart) - under development |\r\n            Paused - the process was paused  - under development
 
         :param status: The status of this Process.
         :type: str
         """
-        allowed_values = ["InProgress", "Cancelled", "Finished", "Error", "Interrupted", "Paused"]
+        allowed_values = ["InProgress", "Cancelled", "Finished", "Error", "Interrupted", "Paused", "Cancelling"]
         if status not in allowed_values:
             raise ValueError(
                 "Invalid value for `status`, must be one of {0}"
@@ -231,7 +231,7 @@ class Process(object):
     def type(self):
         """
         Gets the type of this Process.
-
+        Type of the process
 
         :return: The type of this Process.
         :rtype: str
@@ -242,12 +242,12 @@ class Process(object):
     def type(self, type):
         """
         Sets the type of this Process.
-
+        Type of the process
 
         :param type: The type of this Process.
         :type: str
         """
-        allowed_values = ["ClassifierPrepare", "PrcPrepare", "ClassifierExportDictionaries", "PrcExportDictionaries", "TagsExportWords"]
+        allowed_values = ["ClassifierPrepare", "PrcPrepare", "ClassifierExportDictionaries", "PrcExportDictionaries", "TagsExportWords", "ClassifierActivate", "PrcActivate", "PrcIndex", "PrcIndexPartial"]
         if type not in allowed_values:
             raise ValueError(
                 "Invalid value for `type`, must be one of {0}"

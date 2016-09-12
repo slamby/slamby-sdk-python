@@ -9,6 +9,8 @@ from .data_set_api import DataSetApi
 
 from .document_api import DocumentApi
 
+from .helper_api import HelperApi
+
 from .prc_service_api import PrcServiceApi
 
 from .process_api import ProcessApi

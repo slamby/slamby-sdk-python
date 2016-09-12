@@ -41,7 +41,7 @@ class PrcRecommendationResult(object):
         self.swagger_types = {
             'document_id': 'str',
             'score': 'float',
-            'document': 'Object'
+            'document': 'object'
         }
 
         self.attribute_map = {
@@ -112,7 +112,7 @@ class PrcRecommendationResult(object):
 
 
         :return: The document of this PrcRecommendationResult.
-        :rtype: Object
+        :rtype: object
         """
         return self._document
 
@@ -123,7 +123,7 @@ class PrcRecommendationResult(object):
 
 
         :param document: The document of this PrcRecommendationResult.
-        :type: Object
+        :type: object
         """
         self._document = document
 

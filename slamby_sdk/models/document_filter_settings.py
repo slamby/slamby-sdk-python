@@ -40,22 +40,26 @@ class DocumentFilterSettings(object):
         """
         self.swagger_types = {
             'pagination': 'Pagination',
-            'ids_only': 'bool',
-            'filter': 'Filter'
+            'order': 'Order',
+            'filter': 'Filter',
+            'field_list': 'list[str]'
         }
 
         self.attribute_map = {
             'pagination': 'Pagination',
-            'ids_only': 'IdsOnly',
-            'filter': 'Filter'
+            'order': 'Order',
+            'filter': 'Filter',
+            'field_list': 'FieldList'
         }
 
 
         self._pagination = None
 
-        self._ids_only = None
+        self._order = None
 
         self._filter = None
+
+        self._field_list = None
 
 
 
@@ -83,26 +87,26 @@ class DocumentFilterSettings(object):
 
 
     @property
-    def ids_only(self):
+    def order(self):
         """
-        Gets the ids_only of this DocumentFilterSettings.
+        Gets the order of this DocumentFilterSettings.
 
 
-        :return: The ids_only of this DocumentFilterSettings.
-        :rtype: bool
+        :return: The order of this DocumentFilterSettings.
+        :rtype: Order
         """
-        return self._ids_only
+        return self._order
 
-    @ids_only.setter
-    def ids_only(self, ids_only):
+    @order.setter
+    def order(self, order):
         """
-        Sets the ids_only of this DocumentFilterSettings.
+        Sets the order of this DocumentFilterSettings.
 
 
-        :param ids_only: The ids_only of this DocumentFilterSettings.
-        :type: bool
+        :param order: The order of this DocumentFilterSettings.
+        :type: Order
         """
-        self._ids_only = ids_only
+        self._order = order
 
 
     @property
@@ -126,6 +130,29 @@ class DocumentFilterSettings(object):
         :type: Filter
         """
         self._filter = filter
+
+
+    @property
+    def field_list(self):
+        """
+        Gets the field_list of this DocumentFilterSettings.
+        Query returns only with the specified field(s)
+
+        :return: The field_list of this DocumentFilterSettings.
+        :rtype: list[str]
+        """
+        return self._field_list
+
+    @field_list.setter
+    def field_list(self, field_list):
+        """
+        Sets the field_list of this DocumentFilterSettings.
+        Query returns only with the specified field(s)
+
+        :param field_list: The field_list of this DocumentFilterSettings.
+        :type: list[str]
+        """
+        self._field_list = field_list
 
 
     def to_dict(self):

@@ -63,7 +63,7 @@ class PathItem(object):
     def id(self):
         """
         Gets the id of this PathItem.
-
+        Id of the Tag
 
         :return: The id of this PathItem.
         :rtype: str
@@ -74,7 +74,7 @@ class PathItem(object):
     def id(self, id):
         """
         Sets the id of this PathItem.
-
+        Id of the Tag
 
         :param id: The id of this PathItem.
         :type: str
@@ -86,7 +86,7 @@ class PathItem(object):
     def name(self):
         """
         Gets the name of this PathItem.
-
+        Name of the Tag
 
         :return: The name of this PathItem.
         :rtype: str
@@ -97,7 +97,7 @@ class PathItem(object):
     def name(self, name):
         """
         Sets the name of this PathItem.
-
+        Name of the Tag
 
         :param name: The name of this PathItem.
         :type: str
@@ -109,7 +109,7 @@ class PathItem(object):
     def level(self):
         """
         Gets the level of this PathItem.
-
+        Level of the Tag
 
         :return: The level of this PathItem.
         :rtype: int
@@ -120,7 +120,7 @@ class PathItem(object):
     def level(self, level):
         """
         Sets the level of this PathItem.
-
+        Level of the Tag
 
         :param level: The level of this PathItem.
         :type: int

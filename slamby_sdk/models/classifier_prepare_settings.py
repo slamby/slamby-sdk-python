@@ -41,13 +41,17 @@ class ClassifierPrepareSettings(object):
         self.swagger_types = {
             'data_set_name': 'str',
             'tag_id_list': 'list[str]',
-            'n_gram_list': 'list[int]'
+            'n_gram_list': 'list[int]',
+            'compress_level': 'int',
+            'compress_settings': 'CompressSettings'
         }
 
         self.attribute_map = {
             'data_set_name': 'DataSetName',
             'tag_id_list': 'TagIdList',
-            'n_gram_list': 'NGramList'
+            'n_gram_list': 'NGramList',
+            'compress_level': 'CompressLevel',
+            'compress_settings': 'CompressSettings'
         }
 
 
@@ -57,13 +61,17 @@ class ClassifierPrepareSettings(object):
 
         self._n_gram_list = None
 
+        self._compress_level = None
+
+        self._compress_settings = None
+
 
 
     @property
     def data_set_name(self):
         """
         Gets the data_set_name of this ClassifierPrepareSettings.
-
+        The DataSet name where the Classifier will be trained from
 
         :return: The data_set_name of this ClassifierPrepareSettings.
         :rtype: str
@@ -74,7 +82,7 @@ class ClassifierPrepareSettings(object):
     def data_set_name(self, data_set_name):
         """
         Sets the data_set_name of this ClassifierPrepareSettings.
-
+        The DataSet name where the Classifier will be trained from
 
         :param data_set_name: The data_set_name of this ClassifierPrepareSettings.
         :type: str
@@ -86,7 +94,7 @@ class ClassifierPrepareSettings(object):
     def tag_id_list(self):
         """
         Gets the tag_id_list of this ClassifierPrepareSettings.
-
+        The list of the tag Ids which will be trained
 
         :return: The tag_id_list of this ClassifierPrepareSettings.
         :rtype: list[str]
@@ -97,7 +105,7 @@ class ClassifierPrepareSettings(object):
     def tag_id_list(self, tag_id_list):
         """
         Sets the tag_id_list of this ClassifierPrepareSettings.
-
+        The list of the tag Ids which will be trained
 
         :param tag_id_list: The tag_id_list of this ClassifierPrepareSettings.
         :type: list[str]
@@ -109,7 +117,7 @@ class ClassifierPrepareSettings(object):
     def n_gram_list(self):
         """
         Gets the n_gram_list of this ClassifierPrepareSettings.
-
+        The list of the NGrams which will be trained. The maximum NGram can be the DataSet's NGram
 
         :return: The n_gram_list of this ClassifierPrepareSettings.
         :rtype: list[int]
@@ -120,12 +128,58 @@ class ClassifierPrepareSettings(object):
     def n_gram_list(self, n_gram_list):
         """
         Sets the n_gram_list of this ClassifierPrepareSettings.
-
+        The list of the NGrams which will be trained. The maximum NGram can be the DataSet's NGram
 
         :param n_gram_list: The n_gram_list of this ClassifierPrepareSettings.
         :type: list[int]
         """
         self._n_gram_list = n_gram_list
+
+
+    @property
+    def compress_level(self):
+        """
+        Gets the compress_level of this ClassifierPrepareSettings.
+        
+
+        :return: The compress_level of this ClassifierPrepareSettings.
+        :rtype: int
+        """
+        return self._compress_level
+
+    @compress_level.setter
+    def compress_level(self, compress_level):
+        """
+        Sets the compress_level of this ClassifierPrepareSettings.
+        
+
+        :param compress_level: The compress_level of this ClassifierPrepareSettings.
+        :type: int
+        """
+        self._compress_level = compress_level
+
+
+    @property
+    def compress_settings(self):
+        """
+        Gets the compress_settings of this ClassifierPrepareSettings.
+        
+
+        :return: The compress_settings of this ClassifierPrepareSettings.
+        :rtype: CompressSettings
+        """
+        return self._compress_settings
+
+    @compress_settings.setter
+    def compress_settings(self, compress_settings):
+        """
+        Sets the compress_settings of this ClassifierPrepareSettings.
+        
+
+        :param compress_settings: The compress_settings of this ClassifierPrepareSettings.
+        :type: CompressSettings
+        """
+        self._compress_settings = compress_settings
 
 
     def to_dict(self):

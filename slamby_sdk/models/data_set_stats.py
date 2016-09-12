@@ -55,7 +55,7 @@ class DataSetStats(object):
     def documents_count(self):
         """
         Gets the documents_count of this DataSetStats.
-
+        Shows the available document number
 
         :return: The documents_count of this DataSetStats.
         :rtype: int
@@ -66,7 +66,7 @@ class DataSetStats(object):
     def documents_count(self, documents_count):
         """
         Sets the documents_count of this DataSetStats.
-
+        Shows the available document number
 
         :param documents_count: The documents_count of this DataSetStats.
         :type: int

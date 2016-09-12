@@ -45,7 +45,8 @@ class DataSet(object):
             'tag_field': 'str',
             'interpreted_fields': 'list[str]',
             'statistics': 'DataSetStats',
-            'sample_document': 'Object'
+            'sample_document': 'object',
+            'schema': 'object'
         }
 
         self.attribute_map = {
@@ -55,7 +56,8 @@ class DataSet(object):
             'tag_field': 'TagField',
             'interpreted_fields': 'InterpretedFields',
             'statistics': 'Statistics',
-            'sample_document': 'SampleDocument'
+            'sample_document': 'SampleDocument',
+            'schema': 'Schema'
         }
 
 
@@ -73,13 +75,15 @@ class DataSet(object):
 
         self._sample_document = None
 
+        self._schema = None
+
 
 
     @property
     def name(self):
         """
         Gets the name of this DataSet.
-
+        Name of your dataset. Can contains just A-Z letters, numbers, _ (underscore) and - (hyphen) without any space. This field is unique
 
         :return: The name of this DataSet.
         :rtype: str
@@ -90,7 +94,7 @@ class DataSet(object):
     def name(self, name):
         """
         Sets the name of this DataSet.
-
+        Name of your dataset. Can contains just A-Z letters, numbers, _ (underscore) and - (hyphen) without any space. This field is unique
 
         :param name: The name of this DataSet.
         :type: str
@@ -102,7 +106,7 @@ class DataSet(object):
     def n_gram_count(self):
         """
         Gets the n_gram_count of this DataSet.
-
+        To deeper analyze your text, a dataset uses ngram to index your document. You can set the ngramcount from 1 to 6
 
         :return: The n_gram_count of this DataSet.
         :rtype: int
@@ -113,7 +117,7 @@ class DataSet(object):
     def n_gram_count(self, n_gram_count):
         """
         Sets the n_gram_count of this DataSet.
-
+        To deeper analyze your text, a dataset uses ngram to index your document. You can set the ngramcount from 1 to 6
 
         :param n_gram_count: The n_gram_count of this DataSet.
         :type: int
@@ -125,7 +129,7 @@ class DataSet(object):
     def id_field(self):
         """
         Gets the id_field of this DataSet.
-
+        To identify a document you need to use IDs. You can use your own conventions to name your ID field, but in the settings you need to provide the field name of the id field from your sample document. Can contains just A-Z letters, numbers, _ (underscore) and - (hyphen) without any space
 
         :return: The id_field of this DataSet.
         :rtype: str
@@ -136,7 +140,7 @@ class DataSet(object):
     def id_field(self, id_field):
         """
         Sets the id_field of this DataSet.
-
+        To identify a document you need to use IDs. You can use your own conventions to name your ID field, but in the settings you need to provide the field name of the id field from your sample document. Can contains just A-Z letters, numbers, _ (underscore) and - (hyphen) without any space
 
         :param id_field: The id_field of this DataSet.
         :type: str
@@ -148,7 +152,7 @@ class DataSet(object):
     def tag_field(self):
         """
         Gets the tag_field of this DataSet.
-
+        For text categorization, we provide a predefined document field to store your tags (or categories). If your documents are related to tags or categories, please insert here the tags field name from your sample JSON. Can contains just A-Z letters, numbers, _ (underscore) and - (hyphen) without any space
 
         :return: The tag_field of this DataSet.
         :rtype: str
@@ -159,7 +163,7 @@ class DataSet(object):
     def tag_field(self, tag_field):
         """
         Sets the tag_field of this DataSet.
-
+        For text categorization, we provide a predefined document field to store your tags (or categories). If your documents are related to tags or categories, please insert here the tags field name from your sample JSON. Can contains just A-Z letters, numbers, _ (underscore) and - (hyphen) without any space
 
         :param tag_field: The tag_field of this DataSet.
         :type: str
@@ -171,7 +175,7 @@ class DataSet(object):
     def interpreted_fields(self):
         """
         Gets the interpreted_fields of this DataSet.
-
+        For text analysis, you can set those document fields that contains useful text content. Slamby is doing ngram analysis and text process related works on these fields. How to decide which field you need to set here? Only the interpreted field can be a part of text analyzes. To provide these fields just simply insert the needed text fields from your JSON document. Field names can contain just A-Z letters, numbers, _ (underscore) and - (hyphen) without any space
 
         :return: The interpreted_fields of this DataSet.
         :rtype: list[str]
@@ -182,7 +186,7 @@ class DataSet(object):
     def interpreted_fields(self, interpreted_fields):
         """
         Sets the interpreted_fields of this DataSet.
-
+        For text analysis, you can set those document fields that contains useful text content. Slamby is doing ngram analysis and text process related works on these fields. How to decide which field you need to set here? Only the interpreted field can be a part of text analyzes. To provide these fields just simply insert the needed text fields from your JSON document. Field names can contain just A-Z letters, numbers, _ (underscore) and - (hyphen) without any space
 
         :param interpreted_fields: The interpreted_fields of this DataSet.
         :type: list[str]
@@ -194,7 +198,7 @@ class DataSet(object):
     def statistics(self):
         """
         Gets the statistics of this DataSet.
-
+        These are read-only calculated values
 
         :return: The statistics of this DataSet.
         :rtype: DataSetStats
@@ -205,7 +209,7 @@ class DataSet(object):
     def statistics(self, statistics):
         """
         Sets the statistics of this DataSet.
-
+        These are read-only calculated values
 
         :param statistics: The statistics of this DataSet.
         :type: DataSetStats
@@ -217,10 +221,10 @@ class DataSet(object):
     def sample_document(self):
         """
         Gets the sample_document of this DataSet.
-
+        Using flexible document schema, you can store all of your required data inside one simple dataset. To create a dataset with your required schema you can provide a sample document. The schema is flexible; the only requirement is using standard JSON format. Field names can contain just A-Z letters, numbers, _ (underscore) and - (hyphen) without any space
 
         :return: The sample_document of this DataSet.
-        :rtype: Object
+        :rtype: object
         """
         return self._sample_document
 
@@ -228,12 +232,35 @@ class DataSet(object):
     def sample_document(self, sample_document):
         """
         Sets the sample_document of this DataSet.
-
+        Using flexible document schema, you can store all of your required data inside one simple dataset. To create a dataset with your required schema you can provide a sample document. The schema is flexible; the only requirement is using standard JSON format. Field names can contain just A-Z letters, numbers, _ (underscore) and - (hyphen) without any space
 
         :param sample_document: The sample_document of this DataSet.
-        :type: Object
+        :type: object
         """
         self._sample_document = sample_document
+
+
+    @property
+    def schema(self):
+        """
+        Gets the schema of this DataSet.
+        Using flexible document schema, you can store all of your required data inside one simple dataset. To create a dataset with your required schema you can provide a schema. The schema is flexible. Field names can contain just A-Z letters, numbers, _ (underscore) and - (hyphen) without any space
+
+        :return: The schema of this DataSet.
+        :rtype: object
+        """
+        return self._schema
+
+    @schema.setter
+    def schema(self, schema):
+        """
+        Sets the schema of this DataSet.
+        Using flexible document schema, you can store all of your required data inside one simple dataset. To create a dataset with your required schema you can provide a schema. The schema is flexible. Field names can contain just A-Z letters, numbers, _ (underscore) and - (hyphen) without any space
+
+        :param schema: The schema of this DataSet.
+        :type: object
+        """
+        self._schema = schema
 
 
     def to_dict(self):

@@ -43,6 +43,7 @@ class ClassifierService(object):
             'activate_settings': 'ClassifierActivateSettings',
             'id': 'str',
             'name': 'str',
+            'alias': 'str',
             'description': 'str',
             'status': 'str',
             'type': 'str',
@@ -55,6 +56,7 @@ class ClassifierService(object):
             'activate_settings': 'ActivateSettings',
             'id': 'Id',
             'name': 'Name',
+            'alias': 'Alias',
             'description': 'Description',
             'status': 'Status',
             'type': 'Type',
@@ -70,6 +72,8 @@ class ClassifierService(object):
         self._id = None
 
         self._name = None
+
+        self._alias = None
 
         self._description = None
 
@@ -133,7 +137,7 @@ class ClassifierService(object):
     def id(self):
         """
         Gets the id of this ClassifierService.
-
+        Service unique identifier. It cannot be modified.
 
         :return: The id of this ClassifierService.
         :rtype: str
@@ -144,7 +148,7 @@ class ClassifierService(object):
     def id(self, id):
         """
         Sets the id of this ClassifierService.
-
+        Service unique identifier. It cannot be modified.
 
         :param id: The id of this ClassifierService.
         :type: str
@@ -156,7 +160,7 @@ class ClassifierService(object):
     def name(self):
         """
         Gets the name of this ClassifierService.
-
+        User-defined name for the service
 
         :return: The name of this ClassifierService.
         :rtype: str
@@ -167,7 +171,7 @@ class ClassifierService(object):
     def name(self, name):
         """
         Sets the name of this ClassifierService.
-
+        User-defined name for the service
 
         :param name: The name of this ClassifierService.
         :type: str
@@ -176,10 +180,33 @@ class ClassifierService(object):
 
 
     @property
+    def alias(self):
+        """
+        Gets the alias of this ClassifierService.
+        Alias name of the service. Services can be accessed via this name.\r\n            Alias can be modified. It is unique amongst the services.
+
+        :return: The alias of this ClassifierService.
+        :rtype: str
+        """
+        return self._alias
+
+    @alias.setter
+    def alias(self, alias):
+        """
+        Sets the alias of this ClassifierService.
+        Alias name of the service. Services can be accessed via this name.\r\n            Alias can be modified. It is unique amongst the services.
+
+        :param alias: The alias of this ClassifierService.
+        :type: str
+        """
+        self._alias = alias
+
+
+    @property
     def description(self):
         """
         Gets the description of this ClassifierService.
-
+        Service description
 
         :return: The description of this ClassifierService.
         :rtype: str
@@ -190,7 +217,7 @@ class ClassifierService(object):
     def description(self, description):
         """
         Sets the description of this ClassifierService.
-
+        Service description
 
         :param description: The description of this ClassifierService.
         :type: str
@@ -202,7 +229,7 @@ class ClassifierService(object):
     def status(self):
         """
         Gets the status of this ClassifierService.
-
+        New - the service was created | \r\n            Busy - the service is working on something (e.g.: during the Prepare) | \r\n            Prepared - the service was prepared so you can activate it to use | \r\n            Active - the service so you can use it
 
         :return: The status of this ClassifierService.
         :rtype: str
@@ -213,7 +240,7 @@ class ClassifierService(object):
     def status(self, status):
         """
         Sets the status of this ClassifierService.
-
+        New - the service was created | \r\n            Busy - the service is working on something (e.g.: during the Prepare) | \r\n            Prepared - the service was prepared so you can activate it to use | \r\n            Active - the service so you can use it
 
         :param status: The status of this ClassifierService.
         :type: str
@@ -231,7 +258,7 @@ class ClassifierService(object):
     def type(self):
         """
         Gets the type of this ClassifierService.
-
+        Type of the service.\r\n            Currently supported types:\r\n            - Classifier\r\n            - Prc
 
         :return: The type of this ClassifierService.
         :rtype: str
@@ -242,7 +269,7 @@ class ClassifierService(object):
     def type(self, type):
         """
         Sets the type of this ClassifierService.
-
+        Type of the service.\r\n            Currently supported types:\r\n            - Classifier\r\n            - Prc
 
         :param type: The type of this ClassifierService.
         :type: str
@@ -260,7 +287,7 @@ class ClassifierService(object):
     def process_id_list(self):
         """
         Gets the process_id_list of this ClassifierService.
-
+        Contains all the process ids which belong to this service
 
         :return: The process_id_list of this ClassifierService.
         :rtype: list[str]
@@ -271,7 +298,7 @@ class ClassifierService(object):
     def process_id_list(self, process_id_list):
         """
         Sets the process_id_list of this ClassifierService.
-
+        Contains all the process ids which belong to this service
 
         :param process_id_list: The process_id_list of this ClassifierService.
         :type: list[str]

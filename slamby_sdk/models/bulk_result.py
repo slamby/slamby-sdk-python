@@ -63,7 +63,7 @@ class BulkResult(object):
     def status_code(self):
         """
         Gets the status_code of this BulkResult.
-
+        HTTP status code
 
         :return: The status_code of this BulkResult.
         :rtype: int
@@ -74,7 +74,7 @@ class BulkResult(object):
     def status_code(self, status_code):
         """
         Sets the status_code of this BulkResult.
-
+        HTTP status code
 
         :param status_code: The status_code of this BulkResult.
         :type: int
@@ -86,7 +86,7 @@ class BulkResult(object):
     def id(self):
         """
         Gets the id of this BulkResult.
-
+        Document id
 
         :return: The id of this BulkResult.
         :rtype: str
@@ -97,7 +97,7 @@ class BulkResult(object):
     def id(self, id):
         """
         Sets the id of this BulkResult.
-
+        Document id
 
         :param id: The id of this BulkResult.
         :type: str
@@ -109,7 +109,7 @@ class BulkResult(object):
     def error(self):
         """
         Gets the error of this BulkResult.
-
+        Error message
 
         :return: The error of this BulkResult.
         :rtype: str
@@ -120,7 +120,7 @@ class BulkResult(object):
     def error(self, error):
         """
         Sets the error of this BulkResult.
-
+        Error message
 
         :param error: The error of this BulkResult.
         :type: str
