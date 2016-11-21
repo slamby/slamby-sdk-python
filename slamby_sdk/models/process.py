@@ -202,7 +202,7 @@ class Process(object):
     def status(self):
         """
         Gets the status of this Process.
-        InProgress - the process is in progress, it's working |\r\n            Cancelled - the process was cancelled by the user |\r\n            Finished - the process was finished successfully |\r\n            Error - the process stopped by an error, see the ErrorMessages for detailed information |\r\n            Interrupted - the process was interrupted by an unknown event (e.g.: server restart) - under development |\r\n            Paused - the process was paused  - under development
+        InProgress - the process is in progress, it's working |\r\nCancelled - the process was cancelled by the user |\r\nFinished - the process was finished successfully |\r\nError - the process stopped by an error, see the ErrorMessages for detailed information |\r\nInterrupted - the process was interrupted by an unknown event (e.g.: server restart) - under development |\r\nPaused - the process was paused  - under development
 
         :return: The status of this Process.
         :rtype: str
@@ -213,7 +213,7 @@ class Process(object):
     def status(self, status):
         """
         Sets the status of this Process.
-        InProgress - the process is in progress, it's working |\r\n            Cancelled - the process was cancelled by the user |\r\n            Finished - the process was finished successfully |\r\n            Error - the process stopped by an error, see the ErrorMessages for detailed information |\r\n            Interrupted - the process was interrupted by an unknown event (e.g.: server restart) - under development |\r\n            Paused - the process was paused  - under development
+        InProgress - the process is in progress, it's working |\r\nCancelled - the process was cancelled by the user |\r\nFinished - the process was finished successfully |\r\nError - the process stopped by an error, see the ErrorMessages for detailed information |\r\nInterrupted - the process was interrupted by an unknown event (e.g.: server restart) - under development |\r\nPaused - the process was paused  - under development
 
         :param status: The status of this Process.
         :type: str

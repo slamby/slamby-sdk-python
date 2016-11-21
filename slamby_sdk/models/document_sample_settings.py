@@ -71,7 +71,7 @@ class DocumentSampleSettings(object):
     def id(self):
         """
         Gets the id of this DocumentSampleSettings.
-        It must be a random string for every new sampling, but must be the same for the same sampling during pagination. \r\n            If you leave it empty then it'll be generated automatically, but then you can not use pagination
+        It must be a random string for every new sampling, but must be the same for the same sampling during pagination. \r\nIf you leave it empty then it'll be generated automatically, but then you can not use pagination
 
         :return: The id of this DocumentSampleSettings.
         :rtype: str
@@ -82,7 +82,7 @@ class DocumentSampleSettings(object):
     def id(self, id):
         """
         Sets the id of this DocumentSampleSettings.
-        It must be a random string for every new sampling, but must be the same for the same sampling during pagination. \r\n            If you leave it empty then it'll be generated automatically, but then you can not use pagination
+        It must be a random string for every new sampling, but must be the same for the same sampling during pagination. \r\nIf you leave it empty then it'll be generated automatically, but then you can not use pagination
 
         :param id: The id of this DocumentSampleSettings.
         :type: str
@@ -94,7 +94,7 @@ class DocumentSampleSettings(object):
     def tag_id_list(self):
         """
         Gets the tag_id_list of this DocumentSampleSettings.
-        You can create a sample from a whole dataset, or just from a given tag section. \r\n            To create a sample from the whole dataset please keep it empty. \r\n            To create a sample from a given number of tags please provide the tag ids
+        You can create a sample from a whole dataset, or just from a given tag section. \r\nTo create a sample from the whole dataset please keep it empty. \r\nTo create a sample from a given number of tags please provide the tag ids
 
         :return: The tag_id_list of this DocumentSampleSettings.
         :rtype: list[str]
@@ -105,7 +105,7 @@ class DocumentSampleSettings(object):
     def tag_id_list(self, tag_id_list):
         """
         Sets the tag_id_list of this DocumentSampleSettings.
-        You can create a sample from a whole dataset, or just from a given tag section. \r\n            To create a sample from the whole dataset please keep it empty. \r\n            To create a sample from a given number of tags please provide the tag ids
+        You can create a sample from a whole dataset, or just from a given tag section. \r\nTo create a sample from the whole dataset please keep it empty. \r\nTo create a sample from a given number of tags please provide the tag ids
 
         :param tag_id_list: The tag_id_list of this DocumentSampleSettings.
         :type: list[str]
@@ -117,7 +117,7 @@ class DocumentSampleSettings(object):
     def percent(self):
         """
         Gets the percent of this DocumentSampleSettings.
-        Defining the sample size, you can use percentage or a given number. \r\n            Using a percentage you can define the document number by a percentage. \r\n            This percentage will calculate the document number by using the available dataset document number. \r\n            E.g.: if your dataset contains 100.000 documents and you are using 10% as a sampling size without stratified method, your sample size is 100.000 x 10% = 10.000
+        Defining the sample size, you can use percentage or a given number. \r\nUsing a percentage you can define the document number by a percentage. \r\nThis percentage will calculate the document number by using the available dataset document number. \r\nE.g.: if your dataset contains 100.000 documents and you are using 10% as a sampling size without stratified method, your sample size is 100.000 x 10% = 10.000
 
         :return: The percent of this DocumentSampleSettings.
         :rtype: float
@@ -128,7 +128,7 @@ class DocumentSampleSettings(object):
     def percent(self, percent):
         """
         Sets the percent of this DocumentSampleSettings.
-        Defining the sample size, you can use percentage or a given number. \r\n            Using a percentage you can define the document number by a percentage. \r\n            This percentage will calculate the document number by using the available dataset document number. \r\n            E.g.: if your dataset contains 100.000 documents and you are using 10% as a sampling size without stratified method, your sample size is 100.000 x 10% = 10.000
+        Defining the sample size, you can use percentage or a given number. \r\nUsing a percentage you can define the document number by a percentage. \r\nThis percentage will calculate the document number by using the available dataset document number. \r\nE.g.: if your dataset contains 100.000 documents and you are using 10% as a sampling size without stratified method, your sample size is 100.000 x 10% = 10.000
 
         :param percent: The percent of this DocumentSampleSettings.
         :type: float
@@ -140,7 +140,7 @@ class DocumentSampleSettings(object):
     def size(self):
         """
         Gets the size of this DocumentSampleSettings.
-        Define your sample size by providing a simple integer. \r\n            E.g.: if your dataset contains 100.000 documents and you are using 3.000 as a sampling size without stratified method, your sample size is 3.000
+        Define your sample size by providing a simple integer. \r\nE.g.: if your dataset contains 100.000 documents and you are using 3.000 as a sampling size without stratified method, your sample size is 3.000
 
         :return: The size of this DocumentSampleSettings.
         :rtype: int
@@ -151,7 +151,7 @@ class DocumentSampleSettings(object):
     def size(self, size):
         """
         Sets the size of this DocumentSampleSettings.
-        Define your sample size by providing a simple integer. \r\n            E.g.: if your dataset contains 100.000 documents and you are using 3.000 as a sampling size without stratified method, your sample size is 3.000
+        Define your sample size by providing a simple integer. \r\nE.g.: if your dataset contains 100.000 documents and you are using 3.000 as a sampling size without stratified method, your sample size is 3.000
 
         :param size: The size of this DocumentSampleSettings.
         :type: int

@@ -3,6 +3,8 @@ from __future__ import absolute_import
 # import models into sdk package
 from .models.bulk_result import BulkResult
 from .models.bulk_results import BulkResults
+from .models.change_license import ChangeLicense
+from .models.change_secret import ChangeSecret
 from .models.classifier_activate_settings import ClassifierActivateSettings
 from .models.classifier_prepare_settings import ClassifierPrepareSettings
 from .models.classifier_recommendation_request import ClassifierRecommendationRequest
@@ -22,6 +24,7 @@ from .models.export_dictionaries_settings import ExportDictionariesSettings
 from .models.file_parser import FileParser
 from .models.file_parser_result import FileParserResult
 from .models.filter import Filter
+from .models.license import License
 from .models.order import Order
 from .models.paginated_list_object import PaginatedListObject
 from .models.pagination import Pagination
@@ -49,6 +52,8 @@ from .apis.classifier_service_api import ClassifierServiceApi
 from .apis.data_set_api import DataSetApi
 from .apis.document_api import DocumentApi
 from .apis.helper_api import HelperApi
+from .apis.license_api import LicenseApi
+from .apis.maintenance_api import MaintenanceApi
 from .apis.prc_service_api import PrcServiceApi
 from .apis.process_api import ProcessApi
 from .apis.service_api import ServiceApi

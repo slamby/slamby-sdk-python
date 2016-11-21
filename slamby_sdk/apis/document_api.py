@@ -118,7 +118,7 @@ class DocumentApi(object):
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type([])
+            select_header_content_type(['application/json', 'text/json', 'application/json-patch+json'])
 
         # Authentication setting
         auth_settings = []
@@ -207,7 +207,7 @@ class DocumentApi(object):
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type([])
+            select_header_content_type(['application/json', 'text/json', 'application/json-patch+json'])
 
         # Authentication setting
         auth_settings = []
@@ -296,7 +296,7 @@ class DocumentApi(object):
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type([])
+            select_header_content_type(['application/json', 'text/json', 'application/json-patch+json'])
 
         # Authentication setting
         auth_settings = []
@@ -582,7 +582,7 @@ class DocumentApi(object):
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type([])
+            select_header_content_type(['application/json', 'text/json', 'application/json-patch+json'])
 
         # Authentication setting
         auth_settings = []
@@ -671,7 +671,7 @@ class DocumentApi(object):
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type([])
+            select_header_content_type(['application/json', 'text/json', 'application/json-patch+json'])
 
         # Authentication setting
         auth_settings = []
@@ -760,7 +760,7 @@ class DocumentApi(object):
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type([])
+            select_header_content_type(['application/json', 'text/json', 'application/json-patch+json'])
 
         # Authentication setting
         auth_settings = []
@@ -860,7 +860,7 @@ class DocumentApi(object):
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type([])
+            select_header_content_type(['application/json', 'text/json', 'application/json-patch+json'])
 
         # Authentication setting
         auth_settings = []

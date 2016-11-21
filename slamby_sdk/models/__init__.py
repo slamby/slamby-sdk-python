@@ -3,6 +3,8 @@ from __future__ import absolute_import
 # import models into model package
 from .bulk_result import BulkResult
 from .bulk_results import BulkResults
+from .change_license import ChangeLicense
+from .change_secret import ChangeSecret
 from .classifier_activate_settings import ClassifierActivateSettings
 from .classifier_prepare_settings import ClassifierPrepareSettings
 from .classifier_recommendation_request import ClassifierRecommendationRequest
@@ -22,6 +24,7 @@ from .export_dictionaries_settings import ExportDictionariesSettings
 from .file_parser import FileParser
 from .file_parser_result import FileParserResult
 from .filter import Filter
+from .license import License
 from .order import Order
 from .paginated_list_object import PaginatedListObject
 from .pagination import Pagination
