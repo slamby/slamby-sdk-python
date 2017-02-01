@@ -19,7 +19,11 @@ from .prc_service_api import PrcServiceApi
 
 from .process_api import ProcessApi
 
+from .search_service_api import SearchServiceApi
+
 from .service_api import ServiceApi
+
+from .statistics_api import StatisticsApi
 
 from .status_api import StatusApi
 

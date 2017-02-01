@@ -274,7 +274,7 @@ class ClassifierService(object):
         :param type: The type of this ClassifierService.
         :type: str
         """
-        allowed_values = ["Classifier", "Prc"]
+        allowed_values = ["Classifier", "Prc", "Search"]
         if type not in allowed_values:
             raise ValueError(
                 "Invalid value for `type`, must be one of {0}"

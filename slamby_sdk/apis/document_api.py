@@ -157,7 +157,7 @@ class DocumentApi(object):
 
         :param DocumentCopySettings copy_settings: 
 
-        :return: None
+        :return: Process
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -219,7 +219,7 @@ class DocumentApi(object):
                                             body=body_params,
                                             post_params=form_params,
                                             files=local_var_files,
-                                            response_type=None,
+                                            response_type='Process',
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'))
         return response
@@ -710,7 +710,7 @@ class DocumentApi(object):
 
         :param DocumentMoveSettings move_settings: 
 
-        :return: None
+        :return: Process
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -772,7 +772,7 @@ class DocumentApi(object):
                                             body=body_params,
                                             post_params=form_params,
                                             files=local_var_files,
-                                            response_type=None,
+                                            response_type='Process',
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'))
         return response

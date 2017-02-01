@@ -42,14 +42,16 @@ class ClassifierRecommendationRequest(object):
             'text': 'str',
             'count': 'int',
             'use_emphasizing': 'bool',
-            'need_tag_in_result': 'bool'
+            'need_tag_in_result': 'bool',
+            'parent_tag_id_list': 'list[str]'
         }
 
         self.attribute_map = {
             'text': 'Text',
             'count': 'Count',
             'use_emphasizing': 'UseEmphasizing',
-            'need_tag_in_result': 'NeedTagInResult'
+            'need_tag_in_result': 'NeedTagInResult',
+            'parent_tag_id_list': 'ParentTagIdList'
         }
 
 
@@ -60,6 +62,8 @@ class ClassifierRecommendationRequest(object):
         self._use_emphasizing = None
 
         self._need_tag_in_result = None
+
+        self._parent_tag_id_list = None
 
 
 
@@ -153,6 +157,29 @@ class ClassifierRecommendationRequest(object):
         :type: bool
         """
         self._need_tag_in_result = need_tag_in_result
+
+
+    @property
+    def parent_tag_id_list(self):
+        """
+        Gets the parent_tag_id_list of this ClassifierRecommendationRequest.
+        The recommendation process will be used only tags by these parent(s)
+
+        :return: The parent_tag_id_list of this ClassifierRecommendationRequest.
+        :rtype: list[str]
+        """
+        return self._parent_tag_id_list
+
+    @parent_tag_id_list.setter
+    def parent_tag_id_list(self, parent_tag_id_list):
+        """
+        Sets the parent_tag_id_list of this ClassifierRecommendationRequest.
+        The recommendation process will be used only tags by these parent(s)
+
+        :param parent_tag_id_list: The parent_tag_id_list of this ClassifierRecommendationRequest.
+        :type: list[str]
+        """
+        self._parent_tag_id_list = parent_tag_id_list
 
 
     def to_dict(self):

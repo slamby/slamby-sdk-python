@@ -43,6 +43,7 @@ class Status(object):
             'processor_count': 'int',
             'cpu_usage': 'float',
             'available_free_space': 'float',
+            'total_space': 'float',
             'total_memory': 'float',
             'free_memory': 'float'
         }
@@ -52,6 +53,7 @@ class Status(object):
             'processor_count': 'ProcessorCount',
             'cpu_usage': 'CpuUsage',
             'available_free_space': 'AvailableFreeSpace',
+            'total_space': 'TotalSpace',
             'total_memory': 'TotalMemory',
             'free_memory': 'FreeMemory'
         }
@@ -64,6 +66,8 @@ class Status(object):
         self._cpu_usage = None
 
         self._available_free_space = None
+
+        self._total_space = None
 
         self._total_memory = None
 
@@ -161,6 +165,29 @@ class Status(object):
         :type: float
         """
         self._available_free_space = available_free_space
+
+
+    @property
+    def total_space(self):
+        """
+        Gets the total_space of this Status.
+        Total disk space in MB
+
+        :return: The total_space of this Status.
+        :rtype: float
+        """
+        return self._total_space
+
+    @total_space.setter
+    def total_space(self, total_space):
+        """
+        Sets the total_space of this Status.
+        Total disk space in MB
+
+        :param total_space: The total_space of this Status.
+        :type: float
+        """
+        self._total_space = total_space
 
 
     @property

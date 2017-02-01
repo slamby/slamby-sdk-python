@@ -247,7 +247,7 @@ class Process(object):
         :param type: The type of this Process.
         :type: str
         """
-        allowed_values = ["ClassifierPrepare", "PrcPrepare", "ClassifierExportDictionaries", "PrcExportDictionaries", "TagsExportWords", "ClassifierActivate", "PrcActivate", "PrcIndex", "PrcIndexPartial"]
+        allowed_values = ["ClassifierPrepare", "PrcPrepare", "ClassifierExportDictionaries", "PrcExportDictionaries", "TagsExportWords", "ClassifierActivate", "PrcActivate", "PrcIndex", "PrcIndexPartial", "DocumentsCopy", "DocumentsMove", "SearchPrepare", "SearchActivate"]
         if type not in allowed_values:
             raise ValueError(
                 "Invalid value for `type`, must be one of {0}"

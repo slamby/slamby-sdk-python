@@ -254,12 +254,14 @@ class ProcessApi(object):
 
         :param bool all_status: 
 
+        :param bool all_time: 
+
         :return: list[Process]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['all_status']
+        all_params = ['all_status', 'all_time']
         all_params.append('callback')
 
         params = locals()
@@ -276,6 +278,8 @@ class ProcessApi(object):
 
 
 
+
+
         resource_path = '/api/Processes'.replace('{format}', 'json')
         path_params = {}
 
@@ -284,6 +288,9 @@ class ProcessApi(object):
 
         if 'all_status' in params:
             query_params['allStatus'] = params['all_status']
+
+        if 'all_time' in params:
+            query_params['allTime'] = params['all_time']
 
 
         header_params = {}

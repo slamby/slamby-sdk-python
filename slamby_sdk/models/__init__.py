@@ -1,6 +1,9 @@
 from __future__ import absolute_import
 
 # import models into model package
+from .action import Action
+from .auto_complete_result import AutoCompleteResult
+from .auto_complete_settings import AutoCompleteSettings
 from .bulk_result import BulkResult
 from .bulk_results import BulkResults
 from .change_license import ChangeLicense
@@ -10,6 +13,7 @@ from .classifier_prepare_settings import ClassifierPrepareSettings
 from .classifier_recommendation_request import ClassifierRecommendationRequest
 from .classifier_recommendation_result import ClassifierRecommendationResult
 from .classifier_service import ClassifierService
+from .classifier_settings import ClassifierSettings
 from .compress_settings import CompressSettings
 from .data_set import DataSet
 from .data_set_stats import DataSetStats
@@ -39,7 +43,17 @@ from .prc_recommendation_request import PrcRecommendationRequest
 from .prc_recommendation_result import PrcRecommendationResult
 from .prc_service import PrcService
 from .process import Process
+from .search_activate_settings import SearchActivateSettings
+from .search_classifier_recommendation_result import SearchClassifierRecommendationResult
+from .search_prepare_settings import SearchPrepareSettings
+from .search_request import SearchRequest
+from .search_result import SearchResult
+from .search_result_wrapper import SearchResultWrapper
+from .search_service import SearchService
+from .search_settings import SearchSettings
 from .service import Service
+from .statistics import Statistics
+from .statistics_wrapper import StatisticsWrapper
 from .status import Status
 from .tag import Tag
 from .tag_bulk_settings import TagBulkSettings
