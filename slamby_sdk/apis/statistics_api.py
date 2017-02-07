@@ -86,8 +86,205 @@ class StatisticsApi(object):
 
 
 
+        resource_path = '/api/Statistics'.replace('{format}', 'json')
+        path_params = {}
+
+
+        query_params = {}
+
+
+        header_params = {}
+
+
+        form_params = []
+        local_var_files = {}
+
+
+        body_params = None
+
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept([])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type([])
+
+        # Authentication setting
+        auth_settings = []
+
+        response = self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='StatisticsWrapper',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'))
+        return response
+
+
+    def get_statistics_0(self, year, **kwargs):
+        """
+        
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+
+        >>> thread = api.get_statistics_0(year, callback=callback_function)
+
+
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+
+        :param int year:  (required)
+
+        :return: StatisticsWrapper
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['year']
+        all_params.append('callback')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_statistics_0" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+
+
+        # verify the required parameter 'year' is set
+        if ('year' not in params) or (params['year'] is None):
+            raise ValueError("Missing the required parameter `year` when calling `get_statistics_0`")
+
+
+
+        resource_path = '/api/Statistics/{year}'.replace('{format}', 'json')
+        path_params = {}
+
+        if 'year' in params:
+            path_params['year'] = params['year']
+
+
+        query_params = {}
+
+
+        header_params = {}
+
+
+        form_params = []
+        local_var_files = {}
+
+
+        body_params = None
+
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept([])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type([])
+
+        # Authentication setting
+        auth_settings = []
+
+        response = self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='StatisticsWrapper',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'))
+        return response
+
+
+    def get_statistics_1(self, year, month, **kwargs):
+        """
+        
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+
+        >>> thread = api.get_statistics_1(year, month, callback=callback_function)
+
+
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+
+        :param int year:  (required)
+
+        :param int month:  (required)
+
+        :return: StatisticsWrapper
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['year', 'month']
+        all_params.append('callback')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_statistics_1" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+
+
+        # verify the required parameter 'year' is set
+        if ('year' not in params) or (params['year'] is None):
+            raise ValueError("Missing the required parameter `year` when calling `get_statistics_1`")
+
+
+
+        # verify the required parameter 'month' is set
+        if ('month' not in params) or (params['month'] is None):
+            raise ValueError("Missing the required parameter `month` when calling `get_statistics_1`")
+
+
+
         resource_path = '/api/Statistics/{year}/{month}'.replace('{format}', 'json')
         path_params = {}
+
+        if 'year' in params:
+            path_params['year'] = params['year']
+
+        if 'month' in params:
+            path_params['month'] = params['month']
 
 
         query_params = {}

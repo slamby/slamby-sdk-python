@@ -289,7 +289,7 @@ class SearchSettings(object):
     def fuzziness(self):
         """
         Gets the fuzziness of this SearchSettings.
-        Interpreted as a Levenshtein Edit Distance\u00E2\u20AC\u2030\u00E2\u20AC\u201D\u00E2\u20AC\u2030the number of one character changes that need to be made to one string to make it the same as another string. Can be specified as: -1 (generates an edit distance based on the length of the term) or 0, 1, 2 (the maximum allowed Levenshtein Edit Distance)
+        Interpreted as a Levenshtein Edit Distance\u2009\u2014\u2009the number of one character changes that need to be made to one string to make it the same as another string. Can be specified as: -1 (generates an edit distance based on the length of the term) or 0, 1, 2 (the maximum allowed Levenshtein Edit Distance)
 
         :return: The fuzziness of this SearchSettings.
         :rtype: int
@@ -300,7 +300,7 @@ class SearchSettings(object):
     def fuzziness(self, fuzziness):
         """
         Sets the fuzziness of this SearchSettings.
-        Interpreted as a Levenshtein Edit Distance\u00E2\u20AC\u2030\u00E2\u20AC\u201D\u00E2\u20AC\u2030the number of one character changes that need to be made to one string to make it the same as another string. Can be specified as: -1 (generates an edit distance based on the length of the term) or 0, 1, 2 (the maximum allowed Levenshtein Edit Distance)
+        Interpreted as a Levenshtein Edit Distance\u2009\u2014\u2009the number of one character changes that need to be made to one string to make it the same as another string. Can be specified as: -1 (generates an edit distance based on the length of the term) or 0, 1, 2 (the maximum allowed Levenshtein Edit Distance)
 
         :param fuzziness: The fuzziness of this SearchSettings.
         :type: int
